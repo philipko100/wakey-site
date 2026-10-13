@@ -1,0 +1,113 @@
+/* wakey-site — shared styles. The palette follows the app: a near-black
+   ground with amber as the accent; system sans throughout. Light and dark. */
+
+:root {
+  --bg: #ffffff;
+  --surface: #f6f6f8;
+  --text: #15151a;
+  --text-secondary: #5f6068;
+  --accent: #b8731a;
+  --accent-bright: #e0932a;
+  --border: #e3e3e8;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0f0f14;
+    --surface: #1a1a21;
+    --text: #f5f5f7;
+    --text-secondary: #9e9ead;
+    --accent: #ffc766;
+    --accent-bright: #ffd58a;
+    --border: #2a2a33;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+  -webkit-text-size-adjust: 100%;
+}
+
+.wrap {
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: 3.5rem 1.5rem 5rem;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+  line-height: 1.25;
+  text-wrap: balance;
+}
+
+h1 { font-size: 2.25rem; margin: 0 0 .5rem; letter-spacing: -0.01em; }
+h2 { font-size: 1.3rem; margin: 2.75rem 0 .75rem; }
+h3 { font-size: 1.05rem; margin: 1.75rem 0 .5rem; }
+
+p, ul { margin: 0 0 1rem; }
+ul { padding-left: 1.25rem; }
+li { margin-bottom: .4rem; }
+
+a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+a:hover { text-decoration-thickness: 2px; }
+a:focus-visible { outline: 2px solid var(--accent-bright); outline-offset: 3px; border-radius: 2px; }
+
+.lede { color: var(--text-secondary); font-size: 1.05rem; }
+.meta { color: var(--text-secondary); font-size: .9rem; margin-bottom: 2.5rem; }
+
+.masthead {
+  display: flex;
+  align-items: baseline;
+  gap: .75rem;
+  padding-bottom: 1.25rem;
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid var(--border);
+}
+.masthead a { color: var(--text); text-decoration: none; font-weight: 700; }
+.masthead nav { margin-left: auto; display: flex; gap: 1.25rem; font-size: .95rem; }
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.1rem 1.25rem;
+  margin: 1.5rem 0;
+}
+.card p:last-child { margin-bottom: 0; }
+
+/* The landing page is centred end to end; the legal pages are not. */
+.home h1,
+.home h2,
+.home p,
+.home .card,
+.home footer { text-align: center; }
+.home ul { list-style: none; padding-left: 0; text-align: center; }
+.home li { margin-bottom: .9rem; }
+
+.table { width: 100%; border-collapse: collapse; margin: 1rem 0 1.5rem; font-size: .95rem; }
+.table th, .table td { text-align: left; padding: .6rem .75rem; border-bottom: 1px solid var(--border); vertical-align: top; }
+.table th { color: var(--text-secondary); font-weight: 600; font-size: .85rem; text-transform: uppercase; letter-spacing: .04em; }
+.scroll { overflow-x: auto; }
+
+footer {
+  margin-top: 4rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+  color: var(--text-secondary);
+  font-size: .9rem;
+}
+footer a { color: var(--text-secondary); }
+
+@media (max-width: 480px) {
+  h1 { font-size: 1.8rem; }
+  .wrap { padding-top: 2.5rem; }
+  .masthead { flex-wrap: wrap; }
+  .masthead nav { margin-left: 0; width: 100%; }
+}

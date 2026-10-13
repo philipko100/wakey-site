@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Support — Wakey</title>
+<meta name="description" content="How Wakey's alarm works, why Stop comes back, what to do if an alarm did not ring, Wakey Pro, accounts and sync.">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="masthead">
+    <a href="../">Wakey</a>
+    <nav><a href="../privacy/">Privacy</a><a href="../terms/">Terms</a><a href="../support/">Support</a></nav>
+  </header>
+
+  <h1>Support</h1>
+  <p class="lede">Answers to the things people ask most. If yours is not here, open an issue at
+  <a href="https://github.com/philipko100/wakey-site/issues">github.com/philipko100/wakey-site/issues</a>
+  and we will get back to you.</p>
+
+  <h2>Alarms</h2>
+
+  <h3>Why does Stop not end the alarm?</h3>
+  <p>The alarm belongs to iOS, not to Wakey. When it rings, iOS shows its own alarm screen with a
+  Stop control, the same one the Clock app has. No app can remove, hide or rename it, and a volume
+  button does the same thing. So yes, you can press Stop without doing a mission. What you cannot do
+  is make the alarm go away.</p>
+  <p>Press <strong>Stop</strong> and the ringing stops for now. In that same instant, before anything
+  else, Wakey books another alarm one minute later, then opens on the mission. Ignore it and the
+  phone rings again in a minute, with the same Stop. Each Stop buys sixty seconds and nothing more.
+  Press <strong>Start mission</strong> and the app opens onto the mission while the alarm keeps
+  ringing; it stops only when the chain is finished.</p>
+  <p>This holds because the "book another alarm" step runs inside the button press itself, before
+  the app has even opened. Force-quitting, swiping the app away, locking or rebooting cannot undo
+  it. While a wake is in progress the app shows nothing but the mission.</p>
+  <p>Honest limits: the quiet minute is real; turning the ringer all the way down makes the alarm
+  quiet; powering off or deleting the app ends it, as with every iPhone alarm app.</p>
+
+  <h3>My alarm did not ring</h3>
+  <ul>
+    <li>Check the alarm's switch is on in the list.</li>
+    <li>Check iOS allowed Wakey to schedule alarms (the question iOS asked during the welcome
+    screens). If it was declined, see the next answer.</li>
+    <li>Alarms use the <strong>ringer</strong> volume. Turn it up; Wakey cannot change it.</li>
+    <li>Alarms ring through Silent and through Focus modes; the phone must be on.</li>
+    <li>iOS 26.1 or later plays Wakey's sounds correctly and loops them until you act. On iOS 26.0 the
+    sound may stop after about thirty seconds.</li>
+  </ul>
+
+  <h3>I pressed "Don't Allow" on the alarm permission</h3>
+  <p>iOS remembers that answer permanently and offers no switch to change it. The only way back is to
+  delete Wakey, reinstall it from the App Store, and choose Allow when iOS asks again. Your alarms are
+  stored on the phone, so write them down first.</p>
+
+  <h3>Can I snooze?</h3>
+  <p>There is no snooze button. Stop is the snooze: it always comes back, a minute later, into the
+  mission.</p>
+
+  <h3>Why is the alarm quiet?</h3>
+  <p>The ringer volume. Wakey cannot make itself louder than your ringer setting.</p>
+
+  <h2>Missions</h2>
+
+  <h3>What missions are there?</h3>
+  <p>Math problems, memory tiles, typing a phrase, shaking the phone, and "Hunt an object (AI)",
+  which asks you to show the camera a household object, your hand, a selfie or a gesture. The free
+  plan has one mission per alarm; Wakey Pro lets you chain up to five.</p>
+
+  <h3>What is the safety valve?</h3>
+  <p>After three failed attempts at one mission, Wakey offers to switch that mission to a math
+  problem. The alarm still ends only when a mission is completed.</p>
+
+  <h3>How does "Hunt an object (AI)" work?</h3>
+  <p>While the mission runs, single camera frames are sent to our server and to OpenAI's API, which
+  answers whether the asked-for thing is in view. Frames are never stored. It needs a network
+  connection; each attempt lasts 45 seconds, and the safety valve applies. It is part of Wakey Pro.</p>
+
+  <h2>Wakey Pro</h2>
+
+  <h3>What does Pro add?</h3>
+  <p>Up to five alarms, mission chains of up to five, all ten sounds, and the camera mission. The
+  free app is complete without it: one alarm, one mission, three sounds.</p>
+
+  <h3>How much is it?</h3>
+  <p>$2.99 per month, or $19.99 per year with a 3-day free trial. It renews automatically unless you
+  cancel at least 24 hours before the period ends.</p>
+
+  <h3>Restore Purchases</h3>
+  <p>Settings → Wakey Pro → Restore Purchases. Use it after reinstalling or on a new iPhone signed
+  into the same Apple ID.</p>
+
+  <h3>Manage or cancel</h3>
+  <p>Settings → your name → Subscriptions on your iPhone, or Settings → Wakey Pro → Manage
+  Subscription inside Wakey. Deleting the app does not cancel a subscription.</p>
+
+  <h2>Accounts and sync</h2>
+
+  <h3>Do I need an account?</h3>
+  <p>No. Wakey works fully without one.</p>
+
+  <h3>What does signing in do?</h3>
+  <p>It backs your alarms and wake history up to your account and brings them to another iPhone
+  signed into the same account. Sign in with Apple or Google under Settings → Account.</p>
+
+  <h3>I signed in with Apple and hid my email</h3>
+  <p>That works fine. We only ever see Apple's relay address, and everything behaves the same.</p>
+
+  <h3>My alarms are missing on my other iPhone</h3>
+  <p>Check both phones are signed into the same account. Sync runs when the app opens and after every
+  change, so give it a moment with a network connection.</p>
+
+  <h3>How do I delete my account?</h3>
+  <p>Settings → Account → Delete account, then confirm. It removes the account and everything backed
+  up to it, permanently. The alarms on your iPhone stay and keep ringing.</p>
+
+  <h3>What happens to Wakey Pro when I sign out?</h3>
+  <p>It stays with your Apple ID on this phone. If the app ever shows "Free plan" after signing out
+  or in, tap Restore Purchases.</p>
+
+  <h2>Privacy and analytics</h2>
+  <p>Settings → Privacy has the "Share anonymous usage analytics" switch. What it sends, and
+  everything else about your data, is in the <a href="../privacy/">Privacy Policy</a>.</p>
+
+  <h2>Contact</h2>
+  <p>Open an issue at
+  <a href="https://github.com/philipko100/wakey-site/issues">github.com/philipko100/wakey-site/issues</a>.
+  Telling us your iPhone model and iOS version helps us answer faster.</p>
+
+  <footer>
+    <p>Wakey &middot; <a href="../privacy/">Privacy</a> &middot; <a href="../terms/">Terms</a> &middot;
+    <a href="../support/">Support</a></p>
+  </footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — Wakey</title>
+<meta name="description" content="What Wakey stores, what leaves your iPhone and why, who it is shared with, your rights, and how to delete everything.">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="masthead">
+    <a href="../">Wakey</a>
+    <nav><a href="../privacy/">Privacy</a><a href="../terms/">Terms</a><a href="../support/">Support</a></nav>
+  </header>
+
+  <h1>Privacy Policy</h1>
+  <p class="meta">Last updated 13 October 2026</p>
+
+  <p class="lede">This policy explains what the Wakey app keeps on your iPhone, what leaves it and
+  why, who it is shared with, and how to delete all of it. Three things shape everything below:
+  <strong>we never sell, license or share your personal information for anyone else's
+  purposes</strong>, <strong>there is no advertising and no cross-app tracking</strong>, and the
+  app measures how it is used only while the switch in Settings is on — <a href="#analytics">Usage
+  analytics</a> says exactly what that involves.</p>
+
+  <h2>About this policy</h2>
+  <p>It covers the Wakey iPhone app and this website (together, the "App"). Wakey is made and run by
+  an independent individual developer, not a company. Who is responsible for your data, and how to
+  reach them, is set out under <a href="#contact">Contact</a>.</p>
+  <p>"Personal information" means information relating to an identified or identifiable person,
+  as defined by Canada's Personal Information Protection and Electronic Documents Act (PIPEDA) and
+  British Columbia's Personal Information Protection Act (PIPA), the EU General Data Protection
+  Regulation (GDPR), the UK Data Protection Act 2018, the California Consumer Privacy Act
+  (CCPA/CPRA), the Virginia Consumer Data Protection Act (VCDPA) and other applicable privacy laws.
+  Which parts of this policy apply to you depends on where you live; the sections on your rights say
+  so explicitly.</p>
+  <div class="card">
+    <p><strong>Wakey is a convenience, not a safety device.</strong> Do not rely on it as your only
+    alarm for anything critical. Whether an alarm rings depends on your iPhone: the alarm permission,
+    the ringer volume, the Focus settings you chose, and the phone being on and charged.</p>
+  </div>
+
+  <h2>Information stored on your iPhone</h2>
+  <div class="scroll"><table class="table">
+    <tr><th>What</th><th>Details</th></tr>
+    <tr><td>Alarms</td><td>Label, time, weekdays, sound, missions and their difficulty, retry interval, and when each was created and changed.</td></tr>
+    <tr><td>Wake history</td><td>When an alarm fired, when you finished, how many times you pressed Stop, and which missions you completed or swapped.</td></tr>
+    <tr><td>Settings</td><td>Whether you finished the welcome screens, the analytics switch, a notice about Wakey Pro, and which account last signed in on this phone.</td></tr>
+    <tr><td>A random install identifier</td><td>A random code generated once per install. It identifies this install to our server for the camera mission's daily limit; it is not tied to you, your Apple ID or your device's advertising identifier.</td></tr>
+  </table></div>
+  <p>None of this leaves your iPhone while you are signed out, except what the sections on the
+  camera mission, purchases and usage analytics describe.</p>
+
+  <h2>Accounts (optional)</h2>
+  <p>Wakey works fully without an account. If you choose to sign in:</p>
+  <div class="scroll"><table class="table">
+    <tr><th>What</th><th>Details</th></tr>
+    <tr><td>What we receive</td><td>Your email address and, where the provider supplies it, your name, from Apple or Google. Sign-in is handled by Apple or Google through Supabase, our authentication and database provider; we never see or store a password. If you use <strong>Sign in with Apple</strong> and choose <strong>Hide My Email</strong>, we only ever receive Apple's private relay address.</td></tr>
+    <tr><td>What is stored under the account</td><td>Your alarms and your wake history, so they follow you to another iPhone and survive reinstalling the app.</td></tr>
+    <tr><td>Where</td><td>On Supabase, hosted in the United States (Oregon).</td></tr>
+    <tr><td>Signing out</td><td>Leaves your data in the account and leaves the alarms on your iPhone in place.</td></tr>
+    <tr><td>Deleting the account</td><td><strong>Settings → Account → Delete account</strong> removes the account and everything stored under it, immediately and permanently, on our servers. The alarms on your iPhone stay.</td></tr>
+  </table></div>
+
+  <h2>The camera mission ("Hunt an object (AI)")</h2>
+  <p>When you play this mission, single camera frames (about one every half second while the mission
+  runs) are sent to our server and on to <strong>OpenAI</strong>'s API, which answers whether the
+  asked-for object, hand, face or gesture is in view. Because some prompts ask for a selfie, a frame
+  can show your face.</p>
+  <ul>
+    <li>Frames are <strong>not stored</strong> and not logged by Wakey; they are used only to make the
+    decision and then discarded. OpenAI handles them under its
+    <a href="https://openai.com/policies/api-data-usage-policies">API data usage policy</a>.</li>
+    <li>No face recognition is performed, no biometric identifier is created, and nothing is matched
+    against who you are.</li>
+    <li>The random install identifier and a per-day counter limit how many checks one phone can run.
+    They carry no personal information.</li>
+    <li>The camera is used only during that mission and only with the camera permission you grant
+    iOS. This mission is part of Wakey Pro.</li>
+  </ul>
+
+  <h2>Purchases</h2>
+  <p>Wakey Pro is sold through the App Store and billed to your Apple ID. We never see your payment
+  details. <strong>RevenueCat</strong> processes the purchase receipt so the app knows whether Pro is
+  active; it holds an app user identifier (random while you are signed out, your account identifier
+  when you are signed in), the receipt, and device information such as model, operating system and
+  locale. <strong>Superwall</strong> shows the Wakey Pro screen and receives the same app user
+  identifier and device information to decide which screen to show. Apple's own terms apply to the
+  purchase itself.</p>
+
+  <h2 id="analytics">Usage analytics</h2>
+  <p>To see which parts of Wakey work and which do not, the App can record what people do in it,
+  using <strong>PostHog</strong> as the analytics provider. <strong>The switch is in Settings →
+  Privacy → "Share anonymous usage analytics."</strong> When it is off, nothing is sent.</p>
+  <h3>What analytics records</h3>
+  <ul>
+    <li><code>alarm_created</code>: which mission types the new alarm has and how many</li>
+    <li><code>wake_completed</code>: the mission types, how many times you pressed Stop, and how many
+    missions were swapped through the safety valve</li>
+    <li><code>signed_in</code> (with the provider, Apple or Google), <code>signed_out</code>,
+    <code>account_deleted</code></li>
+    <li>Standard app events (installed, updated, opened, backgrounded), your device model, operating
+    system version and language</li>
+    <li>A random identifier while you are signed out, and your account identifier when you are signed
+    in, so one person's events group together</li>
+  </ul>
+  <h3>What analytics never records</h3>
+  <p>Alarm labels, alarm times, your name, your email address, camera frames, anything you type in a
+  mission. Analytics sees that a wake was completed, never what the alarm was called or when it
+  rang.</p>
+
+  <h2>Server logs</h2>
+  <p>Our hosting provider, Supabase, records standard server logs — IP address, timestamps and the
+  request made — as a normal part of running a service and for security. We do not use them to
+  profile you.</p>
+
+  <h2>What we do not collect</h2>
+  <p>We do not collect your location, contacts, photos library, health data, calendar or advertising
+  identifier. We show no ads, build no advertising profiles and do not track you across other apps or
+  websites. This website sets no cookies and has no tracking pixels, which is why you were not asked
+  to consent to any.</p>
+
+  <h2>Why we process it, and on what legal basis</h2>
+  <p>The legal-basis column applies where the GDPR or the UK Data Protection Act governs your data.</p>
+  <div class="scroll"><table class="table">
+    <tr><th>Purpose</th><th>Legal basis</th></tr>
+    <tr><td>Running alarms and missions on your iPhone</td><td>Not processed by us — it stays on your device</td></tr>
+    <tr><td>Creating and running your account, and syncing your alarms between your iPhones</td><td>Performance of a contract</td></tr>
+    <tr><td>Checking a camera frame during the mission you chose</td><td>Performance of a contract</td></tr>
+    <tr><td>Selling and honouring Wakey Pro</td><td>Performance of a contract</td></tr>
+    <tr><td>Measuring how the App is used so it can be improved</td><td>Legitimate interests, with the in-app switch to turn it off</td></tr>
+    <tr><td>Keeping the service secure and diagnosing faults</td><td>Legitimate interests</td></tr>
+    <tr><td>Replying when you contact us</td><td>Legitimate interests</td></tr>
+  </table></div>
+
+  <h2>Who we share it with</h2>
+  <div class="scroll"><table class="table">
+    <tr><th>Recipient</th><th>What and why</th></tr>
+    <tr><td>Apple</td><td>Your purchase of Wakey Pro, under Apple's terms</td></tr>
+    <tr><td>RevenueCat</td><td>The purchase receipt and the app user identifier, to tell the app whether Pro is active</td></tr>
+    <tr><td>Superwall</td><td>The app user identifier and device information, to show the Wakey Pro screen</td></tr>
+    <tr><td>Supabase</td><td>Hosting, authentication and the database for accounts, alarms and wake history</td></tr>
+    <tr><td>OpenAI</td><td>Camera frames during the "Hunt an object (AI)" mission, for the decision only</td></tr>
+    <tr><td>PostHog</td><td>Usage events while the analytics switch is on</td></tr>
+  </table></div>
+  <p>Nobody else. We do not sell personal information, share it with data brokers, or allow anyone to
+  train artificial-intelligence models on it.</p>
+
+  <h2>Where your information is held, and international transfers</h2>
+  <p>Supabase hosts our data in the United States (Oregon). RevenueCat, Superwall, OpenAI and PostHog
+  also process data in the United States. If you are in the EU or the UK, these transfers rely on
+  the providers' standard contractual clauses.</p>
+
+  <h2>How long we keep it</h2>
+  <ul>
+    <li>Account data (alarms and wake history under your account): until you delete the account. It
+    is then removed immediately; copies in backups age out within 30 days.</li>
+    <li>Camera frames: not kept at all.</li>
+    <li>Daily check counters: counts tied to the random install identifier, with no personal
+    information.</li>
+    <li>Purchase records: as long as Apple and RevenueCat need them to honour your subscription.</li>
+    <li>Usage events: up to 12 months; deleting your account resets the identifier they were grouped
+    under.</li>
+    <li>Server logs: up to 30 days.</li>
+  </ul>
+
+  <h2>Deleting your account</h2>
+  <p>In the App: <strong>Settings → Account → Delete account</strong>, then confirm. Deletion is
+  immediate and permanent. It removes the account, the alarms and wake history stored under it, and
+  resets the analytics identifier. It does not remove the alarms on your iPhone (they keep ringing,
+  as for someone who never signed in) or your purchase with Apple, which you can bring back any time
+  with Restore Purchases. Deleting the App from your iPhone does not delete the account.</p>
+
+  <h2>Security</h2>
+  <p>Everything between the App and our providers travels encrypted. The App keeps your session in
+  the iOS keychain. Access to our servers is limited to the developer.</p>
+
+  <h2>Children</h2>
+  <p>Wakey is not directed at children under 13, and we do not knowingly collect personal
+  information from them. If you believe a child has created an account, contact us and we will
+  delete it.</p>
+
+  <h2>Your rights</h2>
+  <h3>Canada</h3>
+  <p>Under PIPEDA and BC's PIPA you can ask what personal information we hold about you, ask for it
+  to be corrected, and withdraw your consent. Deleting your account withdraws consent for everything
+  held under it. You can complain to the Office of the Privacy Commissioner of Canada or the Office
+  of the Information and Privacy Commissioner for British Columbia.</p>
+  <h3>European Union and United Kingdom</h3>
+  <p>Under the GDPR and UK GDPR you have the rights of access, rectification, erasure, restriction,
+  portability and objection, and the right to withdraw consent at any time. You can complain to your
+  supervisory authority. Deleting your account in the App exercises erasure directly.</p>
+  <h3>United States</h3>
+  <p>Under the CCPA/CPRA, the VCDPA and similar state laws you can know what we collect, delete it,
+  correct it, and opt out of sale or sharing — we do not sell or share personal information for
+  advertising. We will not discriminate against you for exercising these rights.</p>
+  <p>To exercise any of these rights, delete your account in the App or contact us.</p>
+
+  <h2>Changes to this policy</h2>
+  <p>When this policy changes, the date at the top changes. A material change is announced in the
+  App.</p>
+
+  <h2 id="contact">Contact</h2>
+  <p>Wakey is made and operated by Yun Gu Ko, an individual developer based in British Columbia,
+  Canada. Open an issue at <a href="https://github.com/philipko100/wakey-site/issues">github.com/philipko100/wakey-site/issues</a>,
+  or use the contact address shown on the App Store listing.</p>
+
+  <footer>
+    <p>Wakey &middot; <a href="../privacy/">Privacy</a> &middot; <a href="../terms/">Terms</a> &middot;
+    <a href="../support/">Support</a></p>
+  </footer>
+</div>
+</body>
+</html>
