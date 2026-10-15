@@ -37,8 +37,9 @@ editing; they are load-bearing for the App Store privacy label and for the law:
 - **The random install identifier and daily counter** — `Wakey/Services/InstallIdentity.swift`,
   `verification_usage` in the migrations.
 - **Purchases through RevenueCat and Superwall** — `Wakey/Services/RevenueCatSuperwallBackend.swift`.
-- **Analytics is PostHog, five named events, with the switch in Settings → Privacy** —
-  `Wakey/Services/Analytics.swift`, `PostHogAnalytics.swift`, `SettingsView.swift`.
+- **Analytics is PostHog, five named events, always on — no in-app switch since 2026-10-15;
+  objection by email** — `Wakey/Services/Analytics.swift`, `PostHogAnalytics.swift`,
+  `AppEnvironment.bootstrap`.
 - **Hide My Email works** — nothing in the app needs a real address.
 - **No cookies on this site** — there is no script on any page.
 
