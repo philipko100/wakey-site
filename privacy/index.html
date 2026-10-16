@@ -53,11 +53,11 @@
   <p>None of this leaves your iPhone while you are signed out, except what the sections on the
   camera mission, purchases and usage analytics describe.</p>
 
-  <h2>Accounts (optional)</h2>
+  <h2 id="accounts">Accounts (optional)</h2>
   <p>Wakey works fully without an account. If you choose to sign in:</p>
   <div class="scroll"><table class="table">
     <tr><th>What</th><th>Details</th></tr>
-    <tr><td>What we receive</td><td>Your email address and, where the provider supplies it, your name, from Apple or Google. Sign-in is handled by Apple or Google through Supabase, our authentication and database provider; we never see or store a password. If you use <strong>Sign in with Apple</strong> and choose <strong>Hide My Email</strong>, we only ever receive Apple's private relay address.</td></tr>
+    <tr><td>What we receive</td><td>From Apple or Google: your email address and whether it is verified; your name, where the provider supplies it (from Google also your first and last name and the link to your Google profile photo, and, for a Google work or school account, that organisation's domain); whether you chose Apple's Hide My Email; which provider you signed in with; and when you last signed in. We keep these in your account record so we can look after accounts, and we use them for nothing else. Sign-in is handled by Apple or Google through Supabase, our authentication and database provider; we never see or store a password. If you use <strong>Sign in with Apple</strong> and choose <strong>Hide My Email</strong>, we only ever receive Apple's private relay address.</td></tr>
     <tr><td>What is stored under the account</td><td>Your alarms and your wake history, so they follow you to another iPhone and survive reinstalling the app.</td></tr>
     <tr><td>Where</td><td>On Supabase, hosted in the United States (Oregon).</td></tr>
     <tr><td>Signing out</td><td>Leaves your data in the account and leaves the alarms on your iPhone in place.</td></tr>
@@ -210,6 +210,8 @@
   <h2>Changes to this policy</h2>
   <p>When this policy changes, the date at the top changes. A material change is noted here and in
   the App's release notes.</p>
+  <p>16 October 2026: the account record now keeps more of what Apple or Google send at sign-in
+  (see <a href="#accounts">Accounts</a>), and email is the only contact channel.</p>
   <p>15 October 2026: the App no longer has an in-app switch for usage analytics; see
   <a href="#analytics">Usage analytics</a> for how to object.</p>
 
