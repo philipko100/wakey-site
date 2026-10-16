@@ -4,8 +4,8 @@ The public website for the Wakey iPhone app: a landing page, the privacy policy 
 that App Store Connect requires, and a support page.
 
 Static HTML, no build step. Served by GitHub Pages from `main` at the repo root, on the custom
-domain **wakeyapp.xyz** since 16 October 2026 (`CNAME`; HTTPS enforced; the old
-`https://philipko100.github.io/wakey-site/…` URLs redirect page by page):
+domain **wakeyapp.xyz** since 16 October 2026 (`CNAME`; HTTPS enforced; the old GitHub Pages
+URLs redirect page by page). The only contact channel is email (appwakey@gmail.com):
 
 ```
 https://wakeyapp.xyz/            index.html
