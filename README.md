@@ -3,24 +3,27 @@
 The public website for the Wakey iPhone app: a landing page, the privacy policy and terms of use
 that App Store Connect requires, and a support page.
 
-Static HTML, no build step. Served by GitHub Pages from `main` at the repo root:
+Static HTML, no build step. Served by GitHub Pages from `main` at the repo root, on the custom
+domain **wakeyapp.xyz** since 16 October 2026 (`CNAME`; HTTPS enforced; the old
+`https://philipko100.github.io/wakey-site/…` URLs redirect page by page):
 
 ```
-https://philipko100.github.io/wakey-site/            index.html
-https://philipko100.github.io/wakey-site/privacy/    privacy/index.html
-https://philipko100.github.io/wakey-site/terms/      terms/index.html
-https://philipko100.github.io/wakey-site/support/    support/index.html
-style.css                                            shared styles, light and dark
-.nojekyll                                            skip Jekyll; these are plain files
+https://wakeyapp.xyz/            index.html
+https://wakeyapp.xyz/privacy/    privacy/index.html
+https://wakeyapp.xyz/terms/      terms/index.html
+https://wakeyapp.xyz/support/    support/index.html
+CNAME                            the custom domain (written by GitHub; keep it)
+style.css                        shared styles, light and dark
+.nojekyll                        skip Jekyll; these are plain files
 ```
 
 Kept in its own public repository because the app repo is private, and GitHub Pages serves only
 public repositories on the free plan.
 
-**Every path in these pages is relative** (`../style.css`, `../privacy/`). This is a *project*
-site served under `/wakey-site/`, so a root-absolute `/style.css` would 404. The app repo's
-`scripts/check-site.sh` fetches every page and every link to prove it. If a custom domain is added
-later (`CNAME`), relative paths keep working.
+**Every path in these pages is relative** (`../style.css`, `../privacy/`). The site began as a
+*project* site under `/wakey-site/`, where a root-absolute `/style.css` would 404; relative paths
+work there and on the domain alike, so keep them. The app repo's `scripts/check-site.sh` fetches
+every page and every link to prove it (its default base is https://wakeyapp.xyz).
 
 ## Editing the privacy policy
 
