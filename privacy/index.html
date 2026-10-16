@@ -61,7 +61,7 @@
     <tr><td>What is stored under the account</td><td>Your alarms and your wake history, so they follow you to another iPhone and survive reinstalling the app.</td></tr>
     <tr><td>Where</td><td>On Supabase, hosted in the United States (Oregon).</td></tr>
     <tr><td>Signing out</td><td>Leaves your data in the account and leaves the alarms on your iPhone in place.</td></tr>
-    <tr><td>Deleting the account</td><td><strong>Settings → Account → Delete account</strong> removes the account and everything stored under it, immediately and permanently, on our servers. The alarms on your iPhone stay.</td></tr>
+    <tr><td>Deleting the account</td><td><strong>Settings → Account → Delete account</strong> removes the account and everything stored under it, immediately and permanently, on our servers. If you signed in with Apple, Apple asks you to confirm once more and we then ask Apple to disconnect Wakey from your Apple ID; if that cannot be done, the App tells you how to remove the connection yourself (Settings → your name → Sign-In &amp; Security → Sign in with Apple). The alarms on your iPhone stay.</td></tr>
   </table></div>
 
   <h2>The camera mission ("Hunt an object (AI)")</h2>
@@ -211,7 +211,8 @@
   <p>When this policy changes, the date at the top changes. A material change is noted here and in
   the App's release notes.</p>
   <p>16 October 2026: the account record now keeps more of what Apple or Google send at sign-in
-  (see <a href="#accounts">Accounts</a>), and email is the only contact channel.</p>
+  (see <a href="#accounts">Accounts</a>), deleting an account signed in with Apple also disconnects Wakey from that Apple ID,
+  and email is the only contact channel.</p>
   <p>15 October 2026: the App no longer has an in-app switch for usage analytics; see
   <a href="#analytics">Usage analytics</a> for how to object.</p>
 
