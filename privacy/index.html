@@ -126,12 +126,14 @@
   rang.</p>
   <h3>Alarm sounds in use</h3>
   <p>To learn which alarm sounds people actually wake up to, the App also tells our own database, on
-  Supabase, when you create an alarm, switch one on or off, change its sound or delete it: what
-  happened, the sound, and which sounds your switched-on alarms use and how many of each. These
-  records carry a random identifier made on your iPhone for this purpose only. They do not carry your
-  account, name or email, and never include alarm labels or times. Because they are not tied to your
-  account, we cannot pick out yours to delete them. If a record cannot be sent, it is dropped; the App
-  never waits for it.</p>
+  Supabase, when you create an alarm, switch one on or off, change its sound or delete it, and when
+  the sounds your alarms use change in another way (for example after a sync, or the first time you
+  open this version): what happened, the sound, which sounds your switched-on alarms use and how many
+  of each, and when it happened. These records carry a random identifier made on your iPhone for this
+  purpose only. They do not carry your account, name or email, and never include alarm labels or the
+  times your alarms ring. Because they are not tied to your account, we cannot pick out yours to
+  delete them. If a record cannot be sent, the App keeps the latest few on your iPhone and sends them
+  later; it never waits for them.</p>
 
   <h2>Server logs</h2>
   <p>Our hosting provider, Supabase, records standard server logs — IP address, timestamps and the
