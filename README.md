@@ -43,6 +43,9 @@ editing; they are load-bearing for the App Store privacy label and for the law:
 - **Analytics is PostHog, five named events, always on — no in-app switch since 2026-10-15;
   objection by email** — `Wakey/Services/Analytics.swift`, `PostHogAnalytics.swift`,
   `AppEnvironment.bootstrap`.
+- **Alarm sounds in use go to Supabase under a random per-install id, not the account, and a failed
+  send is dropped (since 2026-11-19)** — `Wakey/Services/SoundUsageReporter.swift`,
+  `WakeyCore/Sources/WakeyCore/SoundUsage.swift`, `sound_usage_events` in the migrations.
 - **Hide My Email works** — nothing in the app needs a real address.
 - **No cookies on this site** — there is no script on any page.
 

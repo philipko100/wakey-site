@@ -15,7 +15,7 @@
   </header>
 
   <h1>Privacy Policy</h1>
-  <p class="meta">Last updated 18 November 2026</p>
+  <p class="meta">Last updated 19 November 2026</p>
 
   <p class="lede">This policy explains what the Wakey app keeps on your iPhone, what leaves it and
   why, who it is shared with, and how to delete all of it. Three things shape everything below:
@@ -124,6 +124,14 @@
   <p>Alarm labels, alarm times, your name, your email address, camera frames, anything you type in a
   mission. Analytics sees that a wake was completed, never what the alarm was called or when it
   rang.</p>
+  <h3>Alarm sounds in use</h3>
+  <p>To learn which alarm sounds people actually wake up to, the App also tells our own database, on
+  Supabase, when you create an alarm, switch one on or off, change its sound or delete it: what
+  happened, the sound, and which sounds your switched-on alarms use and how many of each. These
+  records carry a random identifier made on your iPhone for this purpose only. They do not carry your
+  account, name or email, and never include alarm labels or times. Because they are not tied to your
+  account, we cannot pick out yours to delete them. If a record cannot be sent, it is dropped; the App
+  never waits for it.</p>
 
   <h2>Server logs</h2>
   <p>Our hosting provider, Supabase, records standard server logs — IP address, timestamps and the
@@ -155,7 +163,7 @@
     <tr><td>Apple</td><td>Your purchase of Wakey Pro, under Apple's terms</td></tr>
     <tr><td>RevenueCat</td><td>The purchase receipt and the app user identifier, to tell the app whether Pro is active</td></tr>
     <tr><td>Superwall</td><td>The app user identifier and device information, to show the Wakey Pro screen</td></tr>
-    <tr><td>Supabase</td><td>Hosting, authentication and the database for accounts, alarms and wake history</td></tr>
+    <tr><td>Supabase</td><td>Hosting, authentication and the database for accounts, alarms, wake history and the alarm-sound records</td></tr>
     <tr><td>OpenAI</td><td>Camera frames during the "Hunt an object (AI)" mission, for the decision only</td></tr>
     <tr><td>PostHog</td><td>The usage events listed under Usage analytics</td></tr>
   </table></div>
@@ -179,6 +187,8 @@
     <li>Usage events: for as long as PostHog retains them under our plan. Deleting your account
     removes the link between you and the identifier they were grouped under; events already sent
     stay in PostHog pseudonymously unless you ask us to delete that person record too.</li>
+    <li>Alarm-sound records: kept while they help us choose the App's sounds. They are not tied to
+    your account, so deleting the account does not affect them.</li>
     <li>Server logs: for as long as our hosting provider retains them under our plan (days to a few
     weeks).</li>
   </ul>
@@ -221,6 +231,8 @@
   <h2>Changes to this policy</h2>
   <p>When this policy changes, the date at the top changes. A material change is noted here and in
   the App's release notes.</p>
+  <p>19 November 2026: the App now records which alarm sounds are in use, under a random identifier
+  not tied to your account (see <a href="#analytics">Usage analytics</a>).</p>
   <p>16 October 2026: the account record now keeps more of what Apple or Google send at sign-in
   (see <a href="#accounts">Accounts</a>), deleting an account signed in with Apple also disconnects Wakey from that Apple ID,
   and email is the only contact channel.</p>
