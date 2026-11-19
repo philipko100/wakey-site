@@ -33,7 +33,7 @@
   <p>This holds because the "book another alarm" step runs inside the button press itself, before
   the app has even opened. Force-quitting, swiping the app away, locking or rebooting cannot undo
   it. While a wake is in progress the app shows nothing but the mission.</p>
-  <p>Honest limits: the quiet minute is real; turning the ringer all the way down makes the alarm
+  <p>Honest limits: the quiet minute is real; turning the alarm volume (your ringer, unless iOS 27's Match Ringtone Volume is off) all the way down makes the alarm
   quiet; powering off or deleting the app ends it, as with every iPhone alarm app.</p>
 
   <h3>My alarm did not ring</h3>
@@ -41,7 +41,9 @@
     <li>Check the alarm's switch is on in the list.</li>
     <li>Check iOS allowed Wakey to schedule alarms (the question iOS asked during the welcome
     screens). If it was declined, see the next answer.</li>
-    <li>Alarms use the <strong>ringer</strong> volume. Turn it up; Wakey cannot change it.</li>
+    <li>Alarms use the <strong>ringer</strong> volume, unless you turned off Match Ringtone Volume under
+    Settings → Sounds &amp; Haptics → Alarms and Timers (iOS 27), in which case they use the alarm
+    slider there. Turn it up; Wakey cannot change it.</li>
     <li>Alarms ring through Silent and through Focus modes; the phone must be on.</li>
     <li>iOS 26.1 or later plays Wakey's sounds correctly and loops them until you act. On iOS 26.0 the
     sound may stop after about thirty seconds.</li>
@@ -57,7 +59,9 @@
   mission.</p>
 
   <h3>Why is the alarm quiet?</h3>
-  <p>The ringer volume. Wakey cannot make itself louder than your ringer setting.</p>
+  <p>The alarm volume. On iOS 26 that is your ringer volume. On iOS 27 it matches the ringer unless
+  you turn off <strong>Match Ringtone Volume</strong> under Settings → Sounds &amp; Haptics → Alarms and
+  Timers and set the alarm slider yourself. Wakey cannot make itself louder than that setting.</p>
 
   <h2>Missions</h2>
 
